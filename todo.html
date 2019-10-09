@@ -1,34 +1,113 @@
 <html>
-    <head></head>
-        <title>TODO APP</title>
-        <link rel="stylesheet" type="text/css" href="style.css">
-        <body>
-            <div >
-            <h1>Moviemania</h1>
-            </div>
-            <div id="wrapper">
-            <h4>Movies for everyone</h4>
-            <form id="search">
-            <input type="text" placeholder="Search Movies"></div></form>
-            <div id="movie_list" b>
-                <h1>Movies to watch</h1></div>
-                    <ul>
-                        <li><span class="name">Fight Club</span>
-                        <span class="delete"><input type="submit" value="delete"></span> </li>
-                        <li><span class="name">Shashwank Redemption</span>
-                            <span class="delete"><input type="submit" value="delete"></span> </li>
-                        <li><span class ="name">Dilwale</span>  
-                                <span class="delete"><input type="submit" value="delete"></span>
-                        </li>
-                        <li><span>Dark knight</span>
-                                <span class="delete"><input type="submit" value="delete"></span>
-                        </li>
-                        <li><span class ="name">Dark knight1</span> 
-                                <span class="delete"><input type="submit" value="delete"></span>
-                        </li>
-                    </ul> 
-                <input type="checkbox" >Hide the list<input type="text" placeholder="Add movie">
-                <input type="button" value="add">
-                </div>
-        </body>
+<head>
+<title>VARUN</title>
+<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+<style>
+.body{
+  background-color: #00bcd433;
+}
+.first{
+background: #80808069;
+font-family: cursive;
+width:50%;
+margin-left: 30%;
+height: 150px;
+}
+.second{
+background-color: pink;
+font-family: cursive;
+width:50%;
+margin-left: 30%;
+height: 350px;
+}
+.name{
+    font-size: 20px;
+      font-family: Comic Sans MS;
+      margin: 7%;
+}
+.delete{
+    background-color: purple;
+    color:white;
+    font-size: 18px;
+    padding :6px;
+    margin:65%;
+}
+.third{
+background-color: #0000ff63;
+font-family: cursive;
+width:50%;
+margin-left: 30%;
+height: 100px;
+}
+</style>
+</head>
+<body>
+<div class="first">
+<header>
+<h1><center>Moviemania</center></h1>
+<h3><center>Movies for everyone</center></h3>
+<form><center>
+<input type="text"placeholder="Search Movies"><br>
+</center>
+</form>
+</header>
+</div>
+
+<div class="second">
+<h1><center>Movies to watch</center></h1>
+<ul>
+  <li>
+    <spam class="name">Fight Club </spam>
+    <spam class="delete">Delete</spam>
+  </li>
+
+  <li>
+    <spam class="name">Shawshank Redemption</spam>
+    <spam class="delete">Delete</spam>
+  </li>
+
+  <li>
+    <spam class="name">Dillwale</spam>
+    <spam class="delete">Delete</spam>
+  </li>
+
+   <li>
+    <spam class="name">Dark Knight</spam>
+    <spam class="delete">Delete</spam>
+   </li>
+
+  <li>
+    <spam class="name">Dark Knight1</spam>
+    <spam class="delete">Delete</spam>
+    <button class="delete">Delete</button>
+   </li>
+   </ul> 
+</div>
+
+<div class="third">
+<form style="margin:2%;">
+<center>
+
+<input type="Checkbox"style="margin-top: 7%;">Hide the List
+<input type="text" placeholder="Add a movie">
+<input type="button" value="Add">
+</center>
+</form>
+</div>
+<script>
+  function removeItem(){
+  var ul = document.getElementByClassName("dynamic");
+  var candidate = document.getElementByClassName("delete").value;
+  //alert(candidate);
+  var item = document.getElementById(candidate);
+ // alert(item.value);
+  ul.removeChild(item);
+}
+</script>
+
+</body>
 </html>
