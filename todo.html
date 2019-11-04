@@ -1,113 +1,88 @@
+<!DOCTYPE html>
 <html>
 <head>
-<title>VARUN</title>
-<meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
-<style>
-.body{
-  background-color: #00bcd433;
-}
-.first{
-background: #80808069;
-font-family: cursive;
-width:50%;
-margin-left: 30%;
-height: 150px;
-}
-.second{
-background-color: pink;
-font-family: cursive;
-width:50%;
-margin-left: 30%;
-height: 350px;
-}
-.name{
-    font-size: 20px;
-      font-family: Comic Sans MS;
-      margin: 7%;
-}
-.delete{
-    background-color: purple;
-    color:white;
-    font-size: 18px;
-    padding :6px;
-    margin:65%;
-}
-.third{
-background-color: #0000ff63;
-font-family: cursive;
-width:50%;
-margin-left: 30%;
-height: 100px;
-}
-</style>
+	<title>todoapp</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
 </head>
-<body>
-<div class="first">
-<header>
-<h1><center>Moviemania</center></h1>
-<h3><center>Movies for everyone</center></h3>
-<form><center>
-<input type="text"placeholder="Search Movies"><br>
-</center>
-</form>
-</header>
-</div>
-
-<div class="second">
-<h1><center>Movies to watch</center></h1>
-<ul>
-  <li>
-    <spam class="name">Fight Club </spam>
-    <spam class="delete">Delete</spam>
-  </li>
-
-  <li>
-    <spam class="name">Shawshank Redemption</spam>
-    <spam class="delete">Delete</spam>
-  </li>
-
-  <li>
-    <spam class="name">Dillwale</spam>
-    <spam class="delete">Delete</spam>
-  </li>
-
-   <li>
-    <spam class="name">Dark Knight</spam>
-    <spam class="delete">Delete</spam>
-   </li>
-
-  <li>
-    <spam class="name">Dark Knight1</spam>
-    <spam class="delete">Delete</spam>
-    <button class="delete">Delete</button>
-   </li>
-   </ul> 
-</div>
-
-<div class="third">
-<form style="margin:2%;">
-<center>
-
-<input type="Checkbox"style="margin-top: 7%;">Hide the List
-<input type="text" placeholder="Add a movie">
-<input type="button" value="Add">
-</center>
-</form>
+<body bgcolor="LightGray">
+	<div class="aaa">
+	<div class="one">
+	<h2 class="hclass"> Moviemania</h2>
+	<p>Movies for everyone</p>
+	<form> 
+		<input type="text" name="Search Movies" placeholder="Search Movies">
+	</form>
+    </div >
+    <div class="two">
+    	<h1>Movies to Watch</h1>
+    	<ul id="list" type="none">
+    		<li>
+    			<span class="name">figh club</span>  
+		<button id="button"><span class="delete" onclick="f3()">delete</span>  </button>	   
+			  <div class="space"></div>
+    	    </li>
+    		<li>
+    			<span class="name">shashank</span>   
+				<button id="button"><span class="delete" onclick="f3()">delete</span>  </button>	   
+			  <div class="space"></div>
+    		</li>
+    		<li>
+    			<span class="name">Dilwale</span>   
+				<button id="button"><span class="delete" onclick="f3()">delete</span>  </button>	   
+			   <div class="space"></div>
+    		</li>
+    		<li>
+    			<span class="name">dark Knight</span> 
+				<button id="button"><span class="delete" onclick="f3()">delete</span>  </button>	   
+				<div class="space"></div>
+    		</li>
+    		<li>
+    			<span class="name">dark knight1</span> 
+				<button id="button"><span class="delete" onclick="f3()">delete</span>  </button>	   
+				<div class="space"></div>
+			</li>
+			<li class="rb">
+			</li>
+    	</ul>
+    </div>
+    <div class="three">
+    		<label>Hide the list</label>
+			<input type="checkbox" name="Add a movie" onclick="f4()" >
+			<div class="space"></div>
+    		<input type="text" name="Search Movies" placeholder="Add a movie" id="addvalue">
+    		<button onclick="f()">add</button>
+    	
+    </div>
 </div>
 <script>
-  function removeItem(){
-  var ul = document.getElementByClassName("dynamic");
-  var candidate = document.getElementByClassName("delete").value;
-  //alert(candidate);
-  var item = document.getElementById(candidate);
- // alert(item.value);
-  ul.removeChild(item);
+	function f()
+	{
+		var s=document.getElementById("addvalue").value;
+var para=document.createElement("li");
+var data=document.createTextNode(s);
+para.appendChild(data);
+var t=document.getElementById("list");
+t.appendChild(para);
+// var s1=document.getElementById("Addvalue");
+// var para1=document.createElement("span");
+// var data1=document.createTextNode("delete");
+// para1.appendChild(data1);
+// var t1=document.getElementById("list");
+// t1.appendChild(para1);
+	}
+	function f3() {
+  var list = document.getElementById("list");
+  list.removeChild(list.childNodes[0]);
+}
+function f4()
+{
+	var x=document.getElementById("list");
+	if (x.style.visibility === 'hidden') {
+    x.style.visibility = 'visible';
+  } else {
+    x.style.visibility = 'hidden';
+  }
 }
 </script>
-
 </body>
 </html>
